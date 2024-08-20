@@ -1,0 +1,11 @@
+.item {
+  width: 200px;
+  height: 300px;
+  border: 2px solid gray;
+  margin: 10px 0;
+}
+
+.itemImage {
+  aspect-ratio: 1;
+  width: 100%;
+}

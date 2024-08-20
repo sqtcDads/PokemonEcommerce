@@ -1,0 +1,15 @@
+.detailContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.detailImage {
+  aspect-ratio: 1;
+  width: 500px;
+}
