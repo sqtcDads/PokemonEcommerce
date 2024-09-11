@@ -42,14 +42,23 @@ const db = getFirestore(app);
 
 for (let pokemon of pokedex) {
     console.log(`subiendo ${pokemon.name}, id ${pokemon.id}`)
-    await setDoc(doc(db, "pokemon", toString(pokemon.id))), {
+    console.log(`pokemon.id: ${pokemon.id}`)
+    console.log(`pokemon.name: ${pokemon.name}`)
+    console.log(`pokemon.types: ${pokemon.types}`)
+    console.log(`pokemon.weight: ${pokemon.weight}`)
+    console.log(`pokemon.height: ${pokemon.height}`)
+    const docRef = doc(db, "pokemon", `${pokemon.id}`);
+    console.log(`docRef: ${docRef}`);
+
+    await setDoc(
+        doc(db, "pokemon", `${pokemon.id}`), {
         id: pokemon.id,
         name: pokemon.name,
         types: pokemon.types,
         price: pokemon.weight,
         stock: pokemon.height
 
-    }
+    })
 
 };
 

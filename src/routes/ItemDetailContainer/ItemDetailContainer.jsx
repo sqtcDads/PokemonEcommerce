@@ -11,9 +11,9 @@ export default function ItemDetailContainer() {
   useEffect(() => {
     fetchPokemon();
   }, []);
-
+  
   const fetchPokemon = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const url = `https://firebasestorage.googleapis.com/v0/b/coderfirebase.appspot.com/o/pokeImg%2F${id}.svg?alt=media&token=d83cd3bd-6e30-4b0b-949d-b9f5f4960352`;
     const result = await fetch(url);
     const data = await result.json();
     setPokemon(data);
@@ -24,7 +24,8 @@ export default function ItemDetailContainer() {
       <div className="detailContainer">
         <img
           className="detailImage"
-          src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${id}.svg`}
+          src={`https://firebasestorage.googleapis.com/v0/b/coderfirebase.appspot.com/o/pokeImg%2F${id}.svg?alt=media&token=d83cd3bd-6e30-4b0b-949d-b9f5f4960352`}
+
           alt="Pokemon"
         />
 
@@ -35,5 +36,9 @@ export default function ItemDetailContainer() {
         </div>
       </div>
     </Page>
+
+    
   );
+
 }
+
